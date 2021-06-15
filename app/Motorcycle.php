@@ -11,4 +11,12 @@ class Motorcycle extends Vehicle {
 
         $this->motorcycleType = $motorcycleType;
     }
+
+    public function getAll()
+    {
+        $data = parent::getAll();
+        $data[] = $this->motorcycleType;
+
+        return $data;
+    }
 }

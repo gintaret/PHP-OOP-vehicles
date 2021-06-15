@@ -12,4 +12,17 @@ class Car extends Vehicle {
         $this->carBodyType = $carBodyType;
     }
 
+    public function getAll()
+    {
+        $data = parent::getAll();
+        $data[] = $this->carBodyType;
+
+        return $data;
+    }
+//        public function __toString() //konvertuojame klases Car objekta i stringa
+//    {
+//        return $this->brand;
+//        return $this->model;
+//        return $this->carBodyType;
+//    }
 }

@@ -27,8 +27,14 @@ use DemoApp\Bicycle;
         $car->setDescription('family car');
         $car->setNumberOfSeats(5);
 
-        var_dump($car->getAll());
-        echo '<br>';
+//        var_dump($car->getAll());
+        ?>
+        <ul>
+            <?php foreach ($car->getAll() as $carData): ?>
+                    <?=$carData;?><br>
+                <?php endforeach;?>
+
+       <?php
         echo 'Price: '.$car->getPrice().'Eur';
         echo '<br>';
         echo 'Weight: '.$car->getWeight().'kg';
@@ -43,6 +49,7 @@ use DemoApp\Bicycle;
         echo '<br>';
         echo 'Seats: '.$car->getNumberOfSeats();
         ?>
+        </ul>
         <h3>Motorcycles</h3>
         <?php
         $motorcycle = new Motorcycle('BMW','G 310','Roadster');
@@ -54,8 +61,14 @@ use DemoApp\Bicycle;
         $motorcycle->setDescription('suitable for beginners');
         $motorcycle->setNumberOfSeats(2);
 
-        var_dump($motorcycle->getAll());
-        echo '<br>';
+        //var_dump($motorcycle->getAll());
+        ?>
+        <ul>
+            <?php foreach ($motorcycle->getAll() as $motorcycleData): ?>
+                <?=$motorcycleData;?><br>
+            <?php endforeach;?>
+
+        <?php
         echo 'Price: '.$motorcycle->getPrice().'Eur';
         echo '<br>';
         echo 'Weight: '.$motorcycle->getWeight().'kg';
@@ -70,7 +83,7 @@ use DemoApp\Bicycle;
         echo '<br>';
         echo 'Seats: '.$motorcycle->getNumberOfSeats();
         ?>
-
+        </ul>
         <h3>Bicycles</h3>
         <?php
         $bicycle = new Bicycle('Pivot','Firebird','Enduro');
@@ -79,8 +92,14 @@ use DemoApp\Bicycle;
         $bicycle->setDescription('high quality mountain bike');
         $bicycle->setNumberOfSeats(1);
 
-        var_dump($bicycle->getAll());
-        echo '<br>';
+        //var_dump($bicycle->getAll());
+        ?>
+        <ul>
+            <?php foreach ($bicycle->getAll() as $bicycleData): ?>
+                <?=$bicycleData;?><br>
+            <?php endforeach;?>
+
+        <?php
         echo 'Price: '.$bicycle->getPrice().'Eur';
         echo '<br>';
         echo 'Weight: '.$bicycle->getWeight().'kg';

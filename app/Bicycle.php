@@ -11,4 +11,12 @@ class Bicycle extends Vehicle {
 
         $this->bicycleType = $bicycleType;
     }
+
+    public function getAll()
+    {
+        $data = parent::getAll();
+        $data[] = $this->bicycleType;
+
+        return $data;
+    }
 }

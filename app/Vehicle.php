@@ -13,7 +13,7 @@ class Vehicle{
     private $description;
     private $numberOfSeats;
 
-    public function __construct($brand,$model) // konstruktorius, kuris kvieciamas inicijuojant objekta (objekto kurimo metu) (magic method - su 2 buksneliais __)
+    public function __construct($brand,$model) // public - nes konstruktoriu kvieciame uz klases ribu; konstruktorius, kuris kvieciamas inicijuojant objekta (objekto kurimo metu) (magic method - su 2 buksneliais __)
     {
         $this->brand = $brand;
         $this->model = $model;
@@ -55,11 +55,6 @@ class Vehicle{
         ];
     }
 
-//    public function __toString() //konvertuojame klases Vehicle objekta i stringa
-//    {
-//        return $this->brand;
-//        return $this->model;
-//    }
 
     public function getPrice(){ //geteris, grazins tas savybes, kurioms konstruktoriaus nesusikureme
         return $this->price;
